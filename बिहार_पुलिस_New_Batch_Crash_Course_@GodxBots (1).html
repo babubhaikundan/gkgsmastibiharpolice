@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+        <title>बिहार पुलिस New Batch Crash Course </title>
+        <link href="https://cdn.plyr.io/3.7.8/plyr.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js"></script>
+        <style>
+            :root {
+                --font-family: 'Inter', sans-serif;
+                --heading-color: #2d3748;
+                --text-color: #4a5568;
+                --accent-color: #4299e1;
+                --border-color: #e2e8f0;
+                --bg-color: #f7fafc;
+            }
+
+            body {
+                font-family: var(--font-family);
+                line-height: 1.6;
+                color: var(--text-color);
+                background-color: var(--bg-color);
+            }
+
+            .brand-title {
+                font-weight: 700;
+                letter-spacing: -0.025em;
+                color: var(--heading-color);
+                font-variant: small-caps;
+                margin-bottom: 1.5rem;
+            }
+
+            .header-title {
+                font-size: 1.875rem;
+                font-weight: 600;
+                color: var(--heading-color);
+                margin-bottom: 1rem;
+                font-variant: small-caps;
+            }
+
+            .stats-container {
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+                flex-wrap: wrap;
+            }
+
+            .stat-item {
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
+                padding: 1rem 1.5rem;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+                text-align: center;
+                min-width: 150px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--accent-color);
+                margin-bottom: 0.25rem;
+                font-variant: small-caps;
+            }
+
+            .stat-label {
+                font-size: 0.875rem;
+                color: var(--text-color);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .content-section {
+                margin-top: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: var(--heading-color);
+                margin-bottom: 1rem;
+                font-variant: small-caps;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .link-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .link-item {
+                background: white;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                padding: 1rem;
+                margin-bottom: 0.75rem;
+                transition: all 0.2s ease;
+            }
+
+            .link-item:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+
+            .link-item a {
+                color: var(--accent-color);
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+            pre {
+                background: #1a202c;
+                color: #e2e8f0;
+                padding: 1rem;
+                border-radius: 8px;
+                overflow-x: auto;
+                font-family: 'Monaco', 'Consolas', monospace;
+                font-size: 0.875rem;
+                margin: 1rem 0;
+            }
+
+            blockquote {
+                border-left: 4px solid var(--accent-color);
+                margin: 1rem 0;
+                padding: 0.5rem 1rem;
+                background: rgba(66, 153, 225, 0.1);
+                border-radius: 4px;
+            }
+
+            .extracted-by {
+                margin-top: 3rem;
+                text-align: center;
+                font-size: 0.875rem;
+                color: var(--text-color);
+                font-variant: small-caps;
+            }
+
+            .extracted-by a {
+                color: var(--accent-color);
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+            @media (max-width: 768px) {
+                .stats-container {
+                    gap: 1rem;
+                }
+
+                .stat-item {
+                    min-width: 120px;
+                    padding: 0.75rem 1rem;
+                }
+
+                .stat-number {
+                    font-size: 1.5rem;
+                }
+            }
+
+            :root[data-theme="light"] {
+                --bs-body-bg: #f8fafc;
+                --bs-body-color: #1e293b;
+                --card-bg: rgba(255, 255, 255, 0.9);
+                --card-border: rgba(0, 0, 0, 0.1);
+                --hover-bg: rgba(59, 130, 246, 0.1);
+                --icon-color: #3b82f6;
+                --input-color: #1e293b;
+                --input-placeholder: #64748b;
+                --tab-active: #3b82f6;
+                --tab-inactive: #64748b;
+            }
+            :root[data-theme="dark"] {
+                --bs-body-bg: #0f172a;
+                --bs-body-color: #e2e8f0;
+                --card-bg: rgba(255, 255, 255, 0.1);
+                --card-border: rgba(255, 255, 255, 0.2);
+                --hover-bg: rgba(59, 130, 246, 0.2);
+                --icon-color: #60a5fa;
+                --input-color: #e2e8f0;
+                --input-placeholder: rgba(226, 232, 240, 0.5);
+                --tab-active: #ffffff;
+                --tab-inactive: #94a3b8;
+            }
+            body { 
+                background: var(--bs-body-bg); 
+                color: var(--bs-body-color);
+                overflow-x: hidden;
+                width: 100%;
+                min-height: 100vh;
+                -webkit-text-size-adjust: 100%;
+                transition: all 0.3s ease;
+            }
+            .container-fluid {
+                padding-left: max(15px, env(safe-area-inset-left));
+                padding-right: max(15px, env(safe-area-inset-right));
+            }
+            .brand-title { 
+                font-size: min(2.5rem, 8vw);
+                font-weight: 900;
+                background: linear-gradient(45deg, #3b82f6, #10b981);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 2rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                animation: gradientText 3s ease infinite;
+                padding: 0 10px;
+                text-align: center;
+                width: 100%;
+            }
+            .header-title { 
+                font-size: min(1.8rem, 6vw);
+                font-weight: 700;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                hyphens: auto;
+                max-width: 100%;
+                padding: 0 15px;
+                margin: 0 auto;
+            }
+            @media (max-width: 768px) {
+                .nav-tabs .nav-link { 
+                    padding: 10px 15px;
+                    font-size: 0.9rem;
+                }
+                .list-group-item {
+                    padding: 12px 15px;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .list-group-item .item-title {
+                    font-size: 0.9rem;
+                    text-align: center;
+                    justify-content: center;
+                }
+                .list-group-item .item-actions {
+                    width: 100%;
+                    justify-content: center;
+                }
+                .floating-controls {
+                    bottom: max(20px, env(safe-area-inset-bottom));
+                    right: max(20px, env(safe-area-inset-right));
+                }
+                .toast-container {
+                    bottom: max(70px, calc(env(safe-area-inset-bottom) + 70px));
+                    width: 90%;
+                }
+                .btn-action {
+                    padding: 10px;
+                }
+                .search-input {
+                    font-size: 16px; /* Prevents zoom on iOS */
+                }
+            }
+            @supports not (padding: max(0px)) {
+                .container-fluid {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                .floating-controls {
+                    bottom: 20px;
+                    right: 20px;
+                }
+                .toast-container {
+                    bottom: 70px;
+                }
+            }
+            /* Video player container styles */
+            .video-container {
+                position: relative;
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+                aspect-ratio: 16/9;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            }
+            
+            .video-container video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .plyr {
+                width: 100%;
+                height: 100%;
+            }
+            
+            /* Make player controls bigger */
+            :root {
+                --plyr-control-icon-size: 20px;
+                --plyr-font-size-base: 15px;
+                --plyr-control-spacing: 10px;
+            }
+            
+            /* Center the player in container */
+            .container.mb-5 {
+                max-width: 1200px;
+                padding: 0;
+                margin-bottom: 0 !important;
+            }
+            
+            .glass-card {
+                padding: 12px !important;
+                background: var(--card-bg);
+                backdrop-filter: blur(16px);
+                border-radius: 12px;
+                border: 1px solid var(--card-border);
+                transition: all 0.3s ease;
+                margin: 10px;
+            }
+            
+            .glass-card:hover {
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.47);
+                transform: translateY(-5px);
+            }
+            .nav-tabs { 
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                border-bottom-color: rgba(255, 255, 255, 0.2);
+            }
+            .nav-tabs::-webkit-scrollbar { display: none; }
+            .nav-tabs .nav-item { flex: 1; min-width: max-content; }
+            .list-group-item { 
+                background: var(--card-bg);
+                border: 1px solid var(--card-border);
+                color: var(--bs-body-color);
+                transition: all 0.3s ease;
+                margin-bottom: 8px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                padding: 12px 20px;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+            }
+            .list-group-item::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 4px;
+                height: 100%;
+                background: var(--icon-color);
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+            .list-group-item:hover { 
+                background: var(--hover-bg);
+                transform: translateX(10px);
+            }
+            .list-group-item:hover::before {
+                opacity: 1;
+            }
+            .list-group-item .item-title {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                flex: 1;
+            }
+            .list-group-item .item-title i {
+                font-size: 1.2rem;
+                color: var(--icon-color);
+                transition: all 0.3s ease;
+            }
+            .list-group-item:hover .item-title i {
+                transform: scale(1.2);
+            }
+            .list-group-item .item-title span {
+                font-weight: 500;
+            }
+            .list-group-item .item-actions {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .list-group-item:hover .item-actions {
+                opacity: 1;
+            }
+            .btn-action {
+                background: rgba(255, 255, 255, 0.1);
+                border: none;
+                border-radius: 8px;
+                width: 36px;
+                height: 36px;
+                color: #e2e8f0;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .btn-action:hover {
+                transform: scale(1.1);
+            }
+            .btn-action.download {
+                background: rgba(16, 185, 129, 0.2);
+                color: #10b981;
+            }
+            .btn-action.play {
+                background: rgba(59, 130, 246, 0.2);
+                color: #3b82f6;
+            }
+            .btn-action.view {
+                background: rgba(245, 158, 11, 0.2);
+                color: #f59e0b;
+            }
+            .nav-tabs .nav-link { 
+                color: var(--tab-inactive);
+                border: none;
+                position: relative;
+                transition: all 0.3s ease;
+                padding: 15px 25px;
+                font-weight: 600;
+            }
+            .nav-tabs .nav-link:hover { 
+                color: var(--tab-active);
+                border: none;
+                background: transparent;
+            }
+            .nav-tabs .nav-link.active { 
+                color: var(--tab-active);
+                background: transparent;
+                border: none;
+            }
+            .nav-tabs .nav-link.active::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: var(--tab-active);
+                animation: tabSlide 0.3s ease;
+            }
+            @keyframes tabSlide {
+                from { width: 0; }
+                to { width: 100%; }
+            }
+            .search-input {
+                background: var(--card-bg);
+                border: 1px solid var(--card-border);
+                color: var(--input-color);
+                border-radius: 10px;
+                padding: 12px 20px;
+                width: 100%;
+                transition: all 0.3s ease;
+            }
+            .search-input:focus {
+                background: var(--card-bg);
+                border-color: var(--icon-color);
+                box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+                color: var(--input-color);
+            }
+            .search-input::placeholder { 
+                color: var(--input-placeholder);
+            }
+            .video-js { border-radius: 15px; overflow: hidden; }
+            .vjs-theme-forest { --vjs-theme-forest--primary: #3b82f6; }
+            .vjs-theme-forest .vjs-control-bar { background-color: rgba(15, 23, 42, 0.7); }
+            .pulse { animation: pulse 2s infinite; }
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+            .floating-controls {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: flex;
+                gap: 10px;
+                z-index: 1000;
+            }
+            .floating-btn {
+                background: rgba(59, 130, 246, 0.9);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+            .floating-btn:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            }
+            .toast-container {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1050;
+            }
+            .theme-toggle {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+                background: var(--card-bg);
+                border: 1px solid var(--card-border);
+                border-radius: 50px;
+                padding: 8px 16px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                backdrop-filter: blur(10px);
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+            .theme-toggle:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            }
+            .theme-toggle i {
+                font-size: 1.2rem;
+                color: var(--icon-color);
+            }
+            /* Plyr customization */
+            :root {
+                --plyr-color-main: #3b82f6;
+                --plyr-video-background: var(--card-bg);
+                --plyr-menu-background: var(--card-bg);
+                --plyr-menu-color: var(--bs-body-color);
+            }
+            .plyr {
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            }
+            /* Custom URL Input */
+            .url-input-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 15px;
+                padding: 8px;
+                background: var(--card-bg);
+                border-radius: 10px;
+                border: 1px solid var(--card-border);
+            }
+            
+            .custom-url-input {
+                flex: 1;
+                padding: 10px 15px;
+                border-radius: 8px;
+                border: 1px solid var(--card-border);
+                background: var(--bs-body-bg);
+                color: var(--bs-body-color);
+                font-size: 15px;
+                transition: all 0.3s ease;
+            }
+            
+            .custom-url-input:focus {
+                outline: none;
+                border-color: var(--plyr-color-main);
+                box-shadow: 0 0 8px rgba(59, 130, 246, 0.2);
+            }
+            
+            .custom-url-btn {
+                padding: 10px 20px;
+                border-radius: 8px;
+                background: var(--plyr-color-main);
+                color: white;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                white-space: nowrap;
+                min-height: 42px;
+            }
+            
+            .custom-url-btn:hover {
+                opacity: 0.9;
+                transform: scale(1.02);
+            }
+
+            @media (max-width: 768px) {
+                .container.mb-5 {
+                    padding: 0;
+                }
+                
+                .glass-card {
+                    margin: 8px;
+                    padding: 8px !important;
+                }
+                
+                .url-input-wrapper {
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 10px;
+                    padding: 8px;
+                }
+                
+                .custom-url-input {
+                    width: 100%;
+                    padding: 12px;
+                }
+                
+                .custom-url-btn {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 12px;
+                }
+            }
+
+            /* Fullscreen styles */
+            .plyr--fullscreen-active {
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            @media screen and (orientation: portrait) {
+                .plyr--fullscreen-active {
+                    transform: rotate(-90deg);
+                    transform-origin: center;
+                }
+            }
+        </style>
+    </head>
+    
+<body>
+
+    <div class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon" style="display: none;"></i>
+    </div>
+    <div class="container-fluid py-5 text-center">
+        <h1 class="brand-title mb-4">
+<a href="https://t.me/kundan_yadav_bot" style="text-decoration: none; color: inherit;">
+  <i class="fas fa-bolt"></i> 𝕂𝕦𝕟𝕕𝕒𝕟 𝕐𝕒𝕕𝕒𝕧 😎 <i class="fas fa-bolt"></i>
+</a>
+
+                </h1>
+        <h2 class="header-title mb-4">बिहार पुलिस New Batch Crash Course </h2>
+        <p class="lead">
+<a href="https://instagram.com/babubhaikundan" style="text-decoration: none; color: inherit;">
+  <span class="badge bg-primary me-2">
+    <i class="fas fa-robot"></i> @BabuBhaiKundan
+  </span>
+</a>
+
+            <a href="https://t.me/kundan_yadav_bot" class="text-decoration-none">
+                <span class="badge bg-warning">
+                    <i class="fas fa-bolt"></i>
+                </span>
+            </a>
+        </p>
+    </div>
+    
+
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="glass-card">
+                    <div class="video-container">
+                        <video id="player" playsinline controls>
+                            <p>Please enable JavaScript to view videos.</p>
+                        </video>
+                    </div>
+                    <div class="url-input-wrapper">
+                        <input type="text" class="custom-url-input" id="customUrl" placeholder="Enter video URL to play...">
+                        <button class="custom-url-btn" onclick="playCustomUrl()">
+                            <i class="fas fa-play"></i>
+                            <span>Play Video</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container mb-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="input-group">
+                    <span class="input-group-text bg-transparent border-0">
+                        <i class="fas fa-search" style="color: var(--icon-color);"></i>
+                    </span>
+                    <input type="text" class="form-control search-input" id="searchInput" 
+                           placeholder="Search content..." oninput="filterContent()">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="glass-card p-4">
+                    <ul class="nav nav-tabs mb-4" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#videos">
+                                <i class="fas fa-video"></i>Videos
+                                <span class="tab-indicator">127</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#pdfs">
+                                <i class="fas fa-file-pdf"></i>PDFs
+                                <span class="tab-indicator">1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#others">
+                                <i class="fas fa-link"></i>Others
+                                <span class="tab-indicator">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div id="videos" class="tab-pane active">
+                            <div class="list-group"><div class="list-group-item" onclick="playVideo('V1ZWdGVHOVdVa1ZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFM01qUXdNeTB4TnpVd05UWXlNREl6TDJoc2N5MWhZMkUyTVdNdk56SXdjQzl0WVhOMFpYSXROVEl4TlRVek1pNHpNRFEyT1RVek1Ea3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>English Class-01</span></div></div><div class="list-group-item" onclick="playVideo('V25wUGFVSlFWRkZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFM05ESXpNUzB4TnpVd05qUTVNVFF6TDJoc2N5MDBaREU0TkRNdk56SXdjQzl0WVhOMFpYSXROalF3TXpnNE9DNDRNak0xTXpFM09EY3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>English Class - 02</span></div></div><div class="list-group-item" onclick="playVideo('Y2t0WlVrbEJWVUZvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzh4TWpZMk56UTBMVEUzTWpneU56RXpOVEl2YUd4ekxXWXpOamsxT0M4M01qQndMMjFoYzNSbGNpMHpPVEE0T1RBMExqUXpOalkyTlRFM01EUXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern Physics Class -1</span></div></div><div class="list-group-item" onclick="playVideo('WVhoUWVqZEtlRGxvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzh4TWpjd09UVTNMVEUzTWpnek5UY3dNelV2YUd4ekxUUXhZVEppTVM4M01qQndMMjFoYzNSbGNpMDJOVGMyTVRJdU1qSXlOell3T1RFeU55NXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern Physics class-2</span></div></div><div class="list-group-item" onclick="playVideo('TWxaMVZUSnlXVlpvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzh4TWpjME9URTBMVEUzTWpnME5EUXhOVE12YUd4ekxUbGtNbU5qTlM4M01qQndMMjFoYzNSbGNpMDNNVEl4T1RFMExqQTJNVGs0TnpBNE1qVXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern Physics Class-3</span></div></div><div class="list-group-item" onclick="playVideo('ZVV4T2RFZEtUSGhvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzh4TWpjNE9ERTJMVEUzTWpnMU16QXdNVEF2YUd4ekxUaGxaRGRpWkM4M01qQndMMjFoYzNSbGNpMHpORFU1TURRMUxqRXhNakk0TlRjd09DNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern Physics Class-4</span></div></div><div class="list-group-item" onclick="playVideo('VjBwb1JreFRZV1ZvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzh4TWpreE56TTFMVEUzTWpnNU5qRXhNVEl2YUd4ekxUVTRNbU16T1M4M01qQndMMjFoYzNSbGNpMHhORFEwTkRnNExqTXpNVEEyTURJd09UZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern Physics Objective</span></div></div><div class="list-group-item" onclick="playVideo('TkU5V2Rsa3hRVUpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFeE1EWTNPQzB4TnpRNU1EZzVNRGd3TDJoc2N5MW1aVEE0T0RFdk56SXdjQzl0WVhOMFpYSXRNVEV3TXpBME9DNHpPVFUyTmpnd09ESTJMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>चुंबकत्व</span></div></div><div class="list-group-item" onclick="playVideo('VUZrMVNYWnVRbVJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFek1EUTNOUzB4TnpRNU5qQXpPRGd3TDJoc2N5MWxNVEJqT1Rjdk56SXdjQzl0WVhOMFpYSXRPREl4TlRnME5TNDJPVFUyTVRVNE9UTXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Light Part-01</span></div></div><div class="list-group-item" onclick="playVideo('YUdsTFZ6UnRPV05vZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFek1EUTRNUzB4TnpRNU5qQTBOakF4TDJoc2N5MHdZbU5qTjJVdk56SXdjQzl0WVhOMFpYSXROVE0yTVRBMU5pNHlPREk0T0RnMk16a3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Light Part-02</span></div></div><div class="list-group-item" onclick="playVideo('YWs4elNUUlpTbUZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFME5ERTVPQzB4TnpRNU9EZzRPREl6TDJoc2N5MW1ZVEJsWVRRdk56SXdjQzl0WVhOMFpYSXROamd3TXk0eE1EQTNNemMyTWpJek5Ua3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>मात्रक तथा विमा</span></div></div><div class="list-group-item" onclick="playVideo('VTFST2EySlpjVlpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFME5ETTVOeTB4TnpRNU9Ea3lOREk0TDJoc2N5MHlNRGd3TkdNdk56SXdjQzl0WVhOMFpYSXROemt3TWpJME5pNHlNelEzTmpjM05USXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>गति और वेग & सदिश तथा अदिश</span></div></div><div class="list-group-item" onclick="playVideo('V25wbFQybElNV1JvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFME5EUXlPQzB4TnpRNU9Ea3pNVFF3TDJoc2N5MWhNbVkyWldJdk56SXdjQzl0WVhOMFpYSXROVEEwTnpVNE1TNHlOVGt6T0RnME16Z3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>उत्तोलक तथा गुरुत्वाकर्षण बल Part -1</span></div></div><div class="list-group-item" onclick="playVideo('UTBWQldtZzBVRXhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFMU1UazFNQzB4TnpVd01UTTRNVEkxTDJoc2N5MWpaV0kzWVRBdk56SXdjQzl0WVhOMFpYSXROemN6TmpZek5pNDVORFl4TlRjek16SXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>कार्य, ऊर्जा और शक्ति</span></div></div><div class="list-group-item" onclick="playVideo('UkUxcFFuSm1OMjFvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBNU1ESXpOaTB4TnpRNE5UYzBOalF3TDJoc2N5MWlNV1F4WTJVdk56SXdjQzl0WVhOMFpYSXRORGM0TkRrMk55NDJNREUzTmpBMU5EZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class-01</span></div></div><div class="list-group-item" onclick="playVideo('UW5oVFpHaFFUbmxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBNU5EYzVNUzB4TnpRNE5qWXdOamd3TDJoc2N5MHhOMlJqTkRFdk56SXdjQzl0WVhOMFpYSXRPRGt5TkRnek1DNDFORFkzTlRNeU9EUXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class-02</span></div></div><div class="list-group-item" onclick="playVideo('VmtOcmJGVlBTMFZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBNU9URXhOUzB4TnpRNE9ETXpPRFF5TDJoc2N5MHdaakF3WWpndk56SXdjQzl0WVhOMFpYSXRORFk1TkRNMk9TNHhOekUyTXpVMU1qWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class-03</span></div></div><div class="list-group-item" onclick="playVideo('VUVOSU9IZHRNekJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFd01qWTBOUzB4TnpRNE9URTRPVGczTDJoc2N5MDRNREE0WkRndk56SXdjQzl0WVhOMFpYSXRNVEk0TVRrNExqVTVNRGt4TkRZM01qRXlMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class-04</span></div></div><div class="list-group-item" onclick="playVideo('U1hZeFQwMUJkVWhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFek5EZ3lPQzB4TnpRNU5qazNORGM1TDJoc2N5MHdPRFprTVdZdk56SXdjQzl0WVhOMFpYSXROakE1T0RBNU1DNHpPVGMwT1Rnek5ETXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class-05</span></div></div><div class="list-group-item" onclick="playVideo('VUhKVlNGZGhNVGRvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFek9EazVNQzB4TnpRNU56ZzBOREl4TDJoc2N5MHhZVE15WkRZdk56SXdjQzl0WVhOMFpYSXRNekl5TXpJNE5DNDJNRGczT0RBM05EYzNMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class-06</span></div></div><div class="list-group-item" onclick="playVideo('WTNWQk1HMXZRa2RvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFME1qZzRNeTB4TnpRNU9EY3dORFU1TDJoc2N5MWhNVE0xWXprdk56SXdjQzl0WVhOMFpYSXRPRGsyT0RVeU5pNHhORGc1TlRReU16TXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class-07</span></div></div><div class="list-group-item" onclick="playVideo('VTNwdWFEVkZaMHhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFME5UazRNQzB4TnpRNU9UVTNOell4TDJoc2N5MW1aVE5tTW1Vdk56SXdjQzl0WVhOMFpYSXROemt3T0RFME55NDBOVFV4TXpJM05EWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class-08</span></div></div><div class="list-group-item" onclick="playVideo('U25wTFpuVm5jRlZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFME56SXhOUzB4TnpVd01EUXpOakl5TDJoc2N5MWxNV1UwWkdZdk56SXdjQzl0WVhOMFpYSXRPRGN3TVRVd09TNDJNekU1TXpFeE5USXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Chemistry Class - 09</span></div></div><div class="list-group-item" onclick="playVideo('WlZaTlVXRnRaVGxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFM05ERTRNUzB4TnpVd05qUTJPREEyTDJoc2N5MDBZalV4WlRndk56SXdjQzl0WVhOMFpYSXROVGMzTkRBeU5TNHdOemMwTmpjME5qUXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>कोशिका</span></div></div><div class="list-group-item" onclick="playVideo('ZDJrM1JXUTRielJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFM05ESXdOQzB4TnpVd05qUTNOekEyTDJoc2N5MDJabUppTVdRdk56SXdjQzl0WVhOMFpYSXRPRGcyTnpjME9TNDNOalF4TXpJM05qSXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>कोशिका विभाजन तथा उत्तक</span></div></div><div class="list-group-item" onclick="playVideo('TjI1U1RuRkZValJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFM09UazJNeTB4TnpVd056VXhNemd6TDJoc2N5MDRaRE0yWXprdk56SXdjQzl0WVhOMFpYSXRPVEl5TWpJME15NHpOVFEzT0RFME5ETXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>जंतु ऊतक</span></div></div><div class="list-group-item" onclick="playVideo('WmsxaE1sSlBTVlpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFNE1URXhNUzB4TnpVd056WTFPVFl4TDJoc2N5MWlaV1UwTldFdk56SXdjQzl0WVhOMFpYSXRNVGd6TkRNME1TNHhNamN4TkRBeU5UTXpMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>जीवधारियों का वर्गीकरण (पादप जगत)</span></div></div><div class="list-group-item" onclick="playVideo('Um1wSWJHSlllbVZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFNE1qSXlNeTB4TnpVd056YzVNamcxTDJoc2N5MDBNamd4TkdVdk56SXdjQzl0WVhOMFpYSXRNakF4TVRJMU1DNDVOak16TWpjd05EQTBMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>जंतु जगत</span></div></div><div class="list-group-item" onclick="playVideo('YWpJeVMwMVZNelpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFNE1qWXdOaTB4TnpVd09ERXpPRE01TDJoc2N5MWtOV05qWkRNdk56SXdjQzl0WVhOMFpYSXRNekkyT1RReU5pNDBNakEwTVRRd01qYzRMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>जंतु जगत पार्ट -2</span></div></div><div class="list-group-item" onclick="playVideo('Y1dac2NrdFdXRXhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFNE1qZzVNQzB4TnpVd09ESXpOVFU0TDJoc2N5MHhNVEpsTnpNdk56SXdjQzl0WVhOMFpYSXROems1T0RjeExqYzBOVFk0T1Rrd05qTXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>पादप आकारिकी (Plant Morphology)</span></div></div><div class="list-group-item" onclick="playVideo('UTJwSGIyVjVjMlZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFNE5ERTROaTB4TnpVd09ETTNNRFkyTDJoc2N5MWlabUV3WWpZdk56SXdjQzl0WVhOMFpYSXRPVGc0TURBek15NHpNVGt4TlRBNU1qRXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>पादप आकारिकी Part -2</span></div></div><div class="list-group-item" onclick="playVideo('WmxsQ1IyMUZXRmhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBMU5EQTBOUzB4TnpRM056SXdNREF3TDJoc2N5MWxOak5pTnpVdk56SXdjQzl0WVhOMFpYSXRNekk1T1RZeU9DNHhNVFU1T0RNeU56TXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>परिवहन तंत्र</span></div></div><div class="list-group-item" onclick="playVideo('UW1NeFNsUlFNelZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBMk16WTFOeTB4TnpRM09UQTRPVGs0TDJoc2N5MWlZVFF5TnpFdk56SXdjQzl0WVhOMFpYSXRPVGd5TnpNNE5pNHlOekkzTVRBNU1TNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>तंत्रिका तंत्र</span></div></div><div class="list-group-item" onclick="playVideo('Tm5WWGNuWjFOMjVvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBMk5UWTBOQzB4TnpRM09UWXpOekU1TDJoc2N5MWlOVE5rT1RZdk56SXdjQzl0WVhOMFpYSXRPRGc0T0RJMU5DNHpNREV4TnpnME1UWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>उत्सर्जन तंत्र</span></div></div><div class="list-group-item" onclick="playVideo('TUVKNWNUWXpSM2hvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBM056RXlNaTB4TnpRNE1qWXhORE01TDJoc2N5MDFORGhqT0RBdk56SXdjQzl0WVhOMFpYSXROell6TmpJMU9TNHdOakUxTnpnNE9Ea3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>जनन तंत्र</span></div></div><div class="list-group-item" onclick="playVideo('VmsxU09UVnZXR2hvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBNE1EWXlOUzB4TnpRNE16UXpPRGMzTDJoc2N5MHpNalJsWkRRdk56SXdjQzl0WVhOMFpYSXROemcyTXpjMU1pNDRORGN5TnpRMk1ETXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>ग्रंथि</span></div></div><div class="list-group-item" onclick="playVideo('WjNRd1kwdzJPWEJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBNE5ESXhNQzB4TnpRNE5ESTNOVGd3TDJoc2N5MDJPRE15Wmpjdk56SXdjQzl0WVhOMFpYSXROamt3T0RNd09TNDBNRFkxTkRJeE5EZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>विज्ञान की प्रमुख शाखा तथा अन्य</span></div></div><div class="list-group-item" onclick="playVideo('Y2psWFFtNURUbnBvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgxT0RJd01TMHhOekUzTlRVNE1UQXdMMmhzY3kxak5qZ3pPR1l2TnpJd2NDOXRZWE4wWlhJdE16VTVNekUyTXk0Mk56RXhPVE0xT0RrdWJUTjFPQT09')"><div class="item-title"><i class="fas fa-play-circle"></i><span>कंकाल तंत्र Part-01</span></div></div><div class="list-group-item" onclick="playVideo('V1dWbVRFcHNWbEZvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgxT0RReU9TMHhOekUzTmpRek1qUTBMMmhzY3kwMFpHVm1abUV2TnpJd2NDOXRZWE4wWlhJdE56WTVNREl4TUM0M016Y3pNREUxT1RVdWJUTjFPQT09')"><div class="item-title"><i class="fas fa-play-circle"></i><span>कंकाल तंत्र Part-02</span></div></div><div class="list-group-item" onclick="playVideo('YzJGa1RUWnlaMWhvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgxT1RBeE1TMHhOekUzT0RFM09EUXpMMmhzY3kweFpqVTJOemN2TnpJd2NDOXRZWE4wWlhJdE1qWXpOalE0Tmk0eE9EVXlNVFU0TnpJdWJUTjFPQT09')"><div class="item-title"><i class="fas fa-play-circle"></i><span>कंकाल तंत्र Objective</span></div></div><div class="list-group-item" onclick="playVideo('YkVKdlNGWkdia1JvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgyTWprM05DMHhOekU0TnpZMk9ERTFMMmhzY3kweVptWmlPR0V2TnpJd2NDOXRZWE4wWlhJdE5UZzROamczT0M0M05qRXlNak13T1RjdWJUTjFPQT09')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Gland (ग्रंथि) Class -1</span></div></div><div class="list-group-item" onclick="playVideo('YkZWbVpVaFlOWFJvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgyTXpNMU1DMHhOekU0T0RVMU56STJMMmhzY3kweFptUTVabUl2TnpJd2NDOXRZWE4wWlhJdE5ESXpNakF3T0M0MU5qQXhOemMyT0RNdWJUTjFPQT09')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Gland (ग्रंथि) Class -2</span></div></div><div class="list-group-item" onclick="playVideo('WVd4elVuYzJZVzVvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgyTXpjMU5TMHhOekU0T1RNM05EUXpMMmhzY3kwNU9EWmhaR0V2TnpJd2NDOXRZWE4wWlhJdE16a3lNVEExT0M0MU1UazFOakk1TnpZMExtMHpkVGc9')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Gland Objective Class</span></div></div><div class="list-group-item" onclick="playVideo('VEhsYVNHRk1UM0ZvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgxTURNNE9DMHhOekUxTVRNNE16VTRMMmhzY3kxaU9HTXhaREV2TnpJd2NDOXRZWE4wWlhJdE5qazJNekF4Tmk0eE1EWXdNRGcyTlRjdWJUTjFPQT09')"><div class="item-title"><i class="fas fa-play-circle"></i><span>मानव रोग Part -1</span></div></div><div class="list-group-item" onclick="playVideo('YzA5UWJURmtTVzVvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgxTURZM055MHhOekUxTWpJME56WXhMMmhzY3kwd016VXdOelV2TnpJd2NDOXRZWE4wWlhJdE9EWTRNekUyTGpZeU1UTXhOREEwT1RJdWJUTjFPQT09')"><div class="item-title"><i class="fas fa-play-circle"></i><span>मानव रोग Part -2</span></div></div><div class="list-group-item" onclick="playVideo('VEZGMU1scDVaRGhvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgwT0RrMU9TMHhOekUwTmpFNU56ZzVMMmhzY3kwM05qbGpPVEl2TnpJd2NDOXRZWE4wWlhJdE56TTVNemN5TXk0eU9ETXdNVFk1TlRVMUxtMHpkVGc9')"><div class="item-title"><i class="fas fa-play-circle"></i><span>पोषक पदार्थ</span></div></div><div class="list-group-item" onclick="playVideo('YWpWR1EyRXdVRVJvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgwT1RJeE9TMHhOekUwTnpBNU56YzJMMmhzY3kxaFptRXlNVFl2TnpJd2NDOXRZWE4wWlhJdE16STVPREExTXk0Mk5UUXpOVE14TkRFekxtMHpkVGc9')"><div class="item-title"><i class="fas fa-play-circle"></i><span>विटामिन तथा खनिज लवण</span></div></div><div class="list-group-item" onclick="playVideo('WlVGNmNVMWtSR1ZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnME9EUXlNQzB4TnpReU9UWTJOVFE0TDJoc2N5MDJabVV4T0dRdk56SXdjQzl0WVhOMFpYSXROamt6TlRrM09DNDJOREE1TWpnd05ESXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>World History Class-1</span></div></div><div class="list-group-item" onclick="playVideo('YUU1UVJFczVjMnhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnMU1qYzRNUzB4TnpRek1EVXlNRFV5TDJoc2N5MDBNVEV6TnpBdk56SXdjQzl0WVhOMFpYSXRNek0zTnpZd055NDBORFUwTkRJd05Ua3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>World History Class 2</span></div></div><div class="list-group-item" onclick="playVideo('WjFsRU1UVm1Wa3BvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnMU56STNOQzB4TnpRek1UTTVNelUwTDJoc2N5MDJOakpoWWpNdk56SXdjQzl0WVhOMFpYSXRNak13T1Rjd0xqazBOemM1TXpjeU1qY3pMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>World history Class - 3</span></div></div><div class="list-group-item" onclick="playVideo('YmpOVlluYzVXR2RvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnMk1UTXlPQzB4TnpRek1qSXpOemN5TDJoc2N5MHdNalV4WVdJdk56SXdjQzl0WVhOMFpYSXRPRGMwTnpVMExqVTJOVGN5T0RZM09UTXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>World History Class - 4</span></div></div><div class="list-group-item" onclick="playVideo('VWpCMGNtcEJhRlJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnNU1qQTBNQzB4TnpRek9UazJNVFUxTDJoc2N5MHhaall3WW1Ndk56SXdjQzl0WVhOMFpYSXRPVGt4TnpRNE1DNDVNakF6TkRBNU5qWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern History class - 1</span></div></div><div class="list-group-item" onclick="playVideo('YWtZMlowSjBhVXBvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnNU5qUXdOaTB4TnpRME1EZ3lNemN5TDJoc2N5MW1ZekEwWldRdk56SXdjQzl0WVhOMFpYSXROemd5TkRRMk1TNDRNak13TVRRM01ERXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern History Class - 2</span></div></div><div class="list-group-item" onclick="playVideo('VVdsamFrdHJiVGRvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrd01EazFPQzB4TnpRME1UWTVNekV6TDJoc2N5MDNaall4TlRrdk56SXdjQzl0WVhOMFpYSXRNVGc1TXpnM015NDBNalkwTURFMU5EWTNMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern History Class - 3</span></div></div><div class="list-group-item" onclick="playVideo('YTNWM1VUaE5jRXRvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrd05URTJPUzB4TnpRME1qVTBPVGt5TDJoc2N5MHhOMlJpWkdFdk56SXdjQzl0WVhOMFpYSXROekF5TnpBd055NHhNalUxTVRNNU5UTXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Modern History Class - 4</span></div></div><div class="list-group-item" onclick="playVideo('UTI5MmNsbGtWa1pvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFMU1UTXhOaTB4TnpVd01USTVOall5TDJoc2N5MDFZak15TWpRdk56SXdjQzl0WVhOMFpYSXROVFkyTmpJM0xqWTBORFEzT1RZNE9USXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>History Class - 01 (Speedy)</span></div></div><div class="list-group-item" onclick="playVideo('TjNWNFNUWkJPRWRvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFMk5ESTNOeTB4TnpVd016ZzRNekl5TDJoc2N5MDBOekptTVdVdk56SXdjQzl0WVhOMFpYSXROVGMyTWpVNU9DNDFNekl6T0RnNU9UWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>History Class - 02 (Speedy)</span></div></div><div class="list-group-item" onclick="playVideo('ZDI5SFlWZFlVR2xvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFMk9EUTNOaTB4TnpVd05EYzBOVFF6TDJoc2N5MDFOalV4WVRZdk56SXdjQzl0WVhOMFpYSXRNak0yT1RJMk5DNHdOek00TVRjNE1USXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>History Class-03 (Speedy)</span></div></div><div class="list-group-item" onclick="playVideo('YUdsdldtaFFVazlvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrME5UQXlPQzB4TnpRMU1qQTFOelUwTDJoc2N5MDJPVE01WkRRdk56SXdjQzl0WVhOMFpYSXROalkwTmpZek15NDBOVEF6TXpRNU5UZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Medieval History Class - 1</span></div></div><div class="list-group-item" onclick="playVideo('U1VneE5FOW5OVmhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrME9USTFOUzB4TnpRMU1qa3hPVGN6TDJoc2N5MWlZak0wTXpndk56SXdjQzl0WVhOMFpYSXRPVFV4TVRVNU9TNDJNemsyTWpBeE5EZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Medieval History Class - 2</span></div></div><div class="list-group-item" onclick="playVideo('T0d0dU4xSk5NSEJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrMU16WTROUzB4TnpRMU16YzNNVEUxTDJoc2N5MDJOR1l6WWpjdk56SXdjQzl0WVhOMFpYSXRPVGd5TVRnME1pNDBNekE1TkRJMk9USXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Medival History Class-03</span></div></div><div class="list-group-item" onclick="playVideo('TW1GYWNXUm5hR0ZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrMU9ETTNPUzB4TnpRMU5EWTFORGszTDJoc2N5MW1aamt6Wm1Rdk56SXdjQzl0WVhOMFpYSXRPVEk0TVRrNUxqTTNNVEU1TURFNU9UTXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Medival History Class - 4</span></div></div><div class="list-group-item" onclick="playVideo('VkhadE1GTlZTR05vZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRreU1qWTVOQzB4TnpRME5qZzNOVE0zTDJoc2N5MDVaamcwWlRjdk56SXdjQzl0WVhOMFpYSXRPRFl4TVRrMU1pNDFPREUxTlRJM09Ea3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Ancient History Class-01</span></div></div><div class="list-group-item" onclick="playVideo('ZWtGRlZGRjVkR2xvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRreU56QXpNQzB4TnpRME56Y3pPVE15TDJoc2N5MDRPR05sWldNdk56SXdjQzl0WVhOMFpYSXROVEE1TmpZeE1pNHlOemcyTmpjd016WXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Ancient History Class - 2</span></div></div><div class="list-group-item" onclick="playVideo('ZDFwWGVsbDRTVzVvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrek1UVXpPQzB4TnpRME9EWXdNVFUxTDJoc2N5MHhaR1UxTkRNdk56SXdjQzl0WVhOMFpYSXRNVGMxTnpRd09TNHlPVGsxTkRrNU16a3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Ancient History Class - 3</span></div></div><div class="list-group-item" onclick="playVideo('ZVdoU1YwTkJlbnBvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrek5UY3hNUzB4TnpRME9UUTBOelUyTDJoc2N5MW1ZMkk1WlRjdk56SXdjQzl0WVhOMFpYSXROVGN4TURFM09DNDFNelUxT0RBek5qTXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Ancient History Class - 4</span></div></div><div class="list-group-item" onclick="playVideo('TldwaVRuZHZURnBvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrMk5UWTVOQzB4TnpRMU5UVTBNak00TDJoc2N5MHpOREkzTVRZdk56SXdjQzl0WVhOMFpYSXRNakkwT1RFMU9DNDNNelkxT1RnNExtMHpkVGc9')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Geography Class-01</span></div></div><div class="list-group-item" onclick="playVideo('U1VSWFlqWm9RWEpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrM05USXpNaTB4TnpRMU9ERTFNRFU0TDJoc2N5MWpNamRsTVRFdk56SXdjQzl0WVhOMFpYSXRNVE13Tmpjek9DNDJOalU1TURrNU1TNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Geography Class-02</span></div></div><div class="list-group-item" onclick="playVideo('ZG5RM1pHdFVUM1ZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrM09URTFOUzB4TnpRMU9UQXdOek0zTDJoc2N5MHhZVEkwTjJJdk56SXdjQzl0WVhOMFpYSXRNVFF5TkRNekxqWTVPRFl6TkRBNU1ERTJMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Geography Class-03</span></div></div><div class="list-group-item" onclick="playVideo('ZUdSQ1ZGVndaRk5vZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrNE16STVNaTB4TnpRMU9UZzJOakF4TDJoc2N5MWhOMlZtWVRNdk56SXdjQzl0WVhOMFpYSXRPVEEwTVRReE15NDRNRGcwTmpjek1pNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Geography Class-04</span></div></div><div class="list-group-item" onclick="playVideo('U21kcGIwRjFhRmRvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrNE56STJNaTB4TnpRMk1EY3lORFUzTDJoc2N5MDJNR0ZoTXpNdk56SXdjQzl0WVhOMFpYSXROemN3TnpZd01pNDNOamsyTnpNNU56Z3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Geography Class-05</span></div></div><div class="list-group-item" onclick="playVideo('VWtKWlZXWmlhR3BvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrNU1UQTNOaTB4TnpRMk1UWXdNVEUxTDJoc2N5MWpPRE0yTjJJdk56SXdjQzl0WVhOMFpYSXRORFk0TnpZd05TNDBPRFEyTlRNeE9UWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Geography Class-06</span></div></div><div class="list-group-item" onclick="playVideo('U1VkUk0yeDRXVEZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnMk5EY3hPQzB4TnpRek16QTRNREV4TDJoc2N5MWxaRGd5TkRZdk56SXdjQzl0WVhOMFpYSXRNekF4TVRRMU9TNDVNamM1TVRreU5UZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity Class(पंचायती राज+अन्य संस्था)</span></div></div><div class="list-group-item" onclick="playVideo('YzNoRmFEbE1VR05vZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgwTWpNME55MHhOekEzT1Rjek16YzNMMmhzY3kwNU16QTJORGN2TnpJd2NDOXRZWE4wWlhJdE9UZ3lPVEl5TGprd016UTVOakk1TlM1dE0zVTQ=')"><div class="item-title"><i class="fas fa-play-circle"></i><span>महत्वपूर्ण अनुच्छेद ( 1 To 395 )</span></div></div><div class="list-group-item" onclick="playVideo('T1dsSU5tWjZNa3RvZEhSd2N6b3ZMMkZ3Y0hndGRISmhibk5qYjJSbFpDMTJhV1JsYjNNdGJXTmtiaTVoYTJGdFlXa3VibVYwTG1sdUwzWnBaR1Z2Y3k5bmEyZHpiV0Z6ZEdrdFpHRjBZUzgwTWpJeE1DMHhOekEzTlRNM05qZ3dMMmhzY3kwMU1UQm1NVGt2TnpJd2NDOXRZWE4wWlhJdE1UZ3lNekl6T1M0MU1EZzBPRFkwTlRnekxtMHpkVGc9')"><div class="item-title"><i class="fas fa-play-circle"></i><span>महत्वपूर्ण संविधान संशोधन</span></div></div><div class="list-group-item" onclick="playVideo('T0ROdlJqQlRTa0pvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRreE5qa3pNeTB4TnpRME5URXdPVFUyTDJoc2N5MDRNakl3T0dJdk56SXdjQzl0WVhOMFpYSXRNVFV5T1RFME55NDJNVGs0T0RFeE5qTTRMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity Class VVI Topic-1</span></div></div><div class="list-group-item" onclick="playVideo('ZW5CMGJ6ZG9aRTFvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRreE9EYzNNUzB4TnpRME5qQTJNREExTDJoc2N5MDBZbU5oWkRVdk56SXdjQzl0WVhOMFpYSXRPVGt6TlRVME15NDRPRE16TmpjeE1EUXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity VVI Topic-2</span></div></div><div class="list-group-item" onclick="playVideo('YURONFQzaENVWE5vZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrek9UazVNeTB4TnpRMU1ETTNNRGswTDJoc2N5MWpOamN3Tm1Zdk56SXdjQzl0WVhOMFpYSXROalF5TlRFNU1pNHpNak0yT1RnM016UXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity vvi facts-3</span></div></div><div class="list-group-item" onclick="playVideo('WkVKVGRGSkxhak5vZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrM01ETXlOQzB4TnpRMU5qUXhOekUyTDJoc2N5MWpZVFEyTlRFdk56SXdjQzl0WVhOMFpYSXRPRGMwTVRrdU5qazJNakF6T1RFNE5qVXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity VVI Fact-4</span></div></div><div class="list-group-item" onclick="playVideo('V25kSmIyRklSakJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrNU5UTTROeTB4TnpRMk1qUTJOamsxTDJoc2N5MWhNMk14TjJVdk56SXdjQzl0WVhOMFpYSXRNVGt5TURFNE1DNHpOVEU1TVRjMU5UTXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity VVI Fact-05</span></div></div><div class="list-group-item" onclick="playVideo('YVVWWlRVbElTSEJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBeU1qa3pNUzB4TnpRMk9UTTJNRGswTDJoc2N5MWhaVEF6TWpRdk56SXdjQzl0WVhOMFpYSXROemczTURnMkxqVTJPVEF4TkRBd01UWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity VVI Fact Class-06</span></div></div><div class="list-group-item" onclick="playVideo('VVZsV1NURTJlSGxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBeU5EQTNOeTB4TnpRM01ERTVNRGMyTDJoc2N5MHlPRFZrWTJZdk56SXdjQzl0WVhOMFpYSXRNak0zTURjeE5TNDJOekV3TlRFM05qZzJMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity vvi Fact Class - 7</span></div></div><div class="list-group-item" onclick="playVideo('T1dwNFIyaDRhWFpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBeU56a3lPUzB4TnpRM01UQTFOalUxTDJoc2N5MDNOek16TWpJdk56SXdjQzl0WVhOMFpYSXRNemN5TURjME9DNDNNVEV6T0RNNE5TNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity VVI Fact Class-08</span></div></div><div class="list-group-item" onclick="playVideo('ZW1JM2MxSnpSbTlvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBek1qRXhNQzB4TnpRM01Ua3hPRGM0TDJoc2N5MWhPR1ZpTWpjdk56SXdjQzl0WVhOMFpYSXRPREkzT0RNMU1DNDNOall4TkRJeE9ESXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Polity VVI Fact Class-09</span></div></div><div class="list-group-item" onclick="playVideo('YW1kVVVUbE5jVVJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrNU9UTTVNQzB4TnpRMk5ERTFNVGMxTDJoc2N5MWhaREk1TkRrdk56SXdjQzl0WVhOMFpYSXRPREUzTnpFeU5DNDRPRGMzTmpFMk1UVXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Economics Class - 1</span></div></div><div class="list-group-item" onclick="playVideo('Y0dVemN6RnRVRU5vZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBd016TTROUzB4TnpRMk5UQTFOVE00TDJoc2N5MWxNalUxWmpndk56SXdjQzl0WVhOMFpYSXROVFE1TXpReE5DNHlOREl4TWpreU1EUXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Economics Class-02</span></div></div><div class="list-group-item" onclick="playVideo('ZWtwdlUwZDZTVkJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBd056TTVOaTB4TnpRMk5UZzFNamM1TDJoc2N5MW1NelV6WW1Zdk56SXdjQzl0WVhOMFpYSXRPRFF3TlRrMk5DNHlNVFEyTkRZM05DNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Economics Class-03</span></div></div><div class="list-group-item" onclick="playVideo('U0ZGM1p6QkdOMmhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBeE5qTTRNQzB4TnpRMk56WTFNRGs0TDJoc2N5MWtNRFJoTXpndk56SXdjQzl0WVhOMFpYSXRPREEwT0RRNExqVXdNVGM1TkRVMU5TNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Economics class - 4</span></div></div><div class="list-group-item" onclick="playVideo('ZUdwQlFXSlRiRzVvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBeU1ERTFNUzB4TnpRMk9EUTVNVFU0TDJoc2N5MDBZemt4T1RNdk56SXdjQzl0WVhOMFpYSXRPVFUyTkRVek1pNDVOVEE0TXpFME1qUXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Economics Class - 5</span></div></div><div class="list-group-item" onclick="playVideo('ZFZGalFuZHNiVFpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBME5EYzFNeTB4TnpRM05EVXhORE0zTDJoc2N5MDBPREE1TVdVdk56SXdjQzl0WVhOMFpYSXRNVE0zT0RjeE1TNDBNRFEyT0RJeE9UZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact Class-01</span></div></div><div class="list-group-item" onclick="playVideo('T1d3d2MzSjRTVVpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBME56WTVOUzB4TnpRM05UTTNOall3TDJoc2N5MDRPVFpoWlRFdk56SXdjQzl0WVhOMFpYSXROREEwTmpFMU5TNDVNell3TURZMU9USTJMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact Class-02</span></div></div><div class="list-group-item" onclick="playVideo('YjB3NFJEZDZWR2RvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBME9USXdNeTB4TnpRM05qSXpPRGMzTDJoc2N5MHpaRFF3Tmprdk56SXdjQzl0WVhOMFpYSXROelEwTkRBNU1DNDRNVGcyTURZeU9EZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact-03</span></div></div><div class="list-group-item" onclick="playVideo('VGpsdlRqWTNVMXBvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBMU56UTVNQzB4TnpRM056azNNRFF3TDJoc2N5MHlOemt6WkRVdk56SXdjQzl0WVhOMFpYSXRNVEkxTXpnM01DNDROalkzTmpFeU1EZzFMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact -04</span></div></div><div class="list-group-item" onclick="playVideo('YXpsaVdXa3dVa2RvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBMk1UWXdPQzB4TnpRM09EZ3pNalUxTDJoc2N5MWpaV1F5TmpFdk56SXdjQzl0WVhOMFpYSXRPVEkzTURjNE9TNHhOelF3TkRjeE9UWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact - 5</span></div></div><div class="list-group-item" onclick="playVideo('T0hWMFdWcERTSGxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBM01ESTBPQzB4TnpRNE1EVTJOREU0TDJoc2N5MDNNekJrT0dRdk56SXdjQzl0WVhOMFpYSXRNelk0TURnNU5TNDRPRFl3TXpjMk56UXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact-06</span></div></div><div class="list-group-item" onclick="playVideo('VkRWYVlXNXNWRmxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBM05EZzVNaTB4TnpRNE1qTXlPVGs1TDJoc2N5MHlOemMxTWpNdk56SXdjQzl0WVhOMFpYSXRPVEU0TlRnME55NDJNRGt3TXpNME5USXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact -07</span></div></div><div class="list-group-item" onclick="playVideo('V1hScWVscFlRakpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBM09ETXpOQzB4TnpRNE16RTBPVEF4TDJoc2N5MDRPR0l5T0dFdk56SXdjQzl0WVhOMFpYSXRNVFU0TmpFeU1pNDFOREF6TVRNNU9USXlMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact - 08</span></div></div><div class="list-group-item" onclick="playVideo('WlU5SmRtWnJUamRvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBNE1qRTROQzB4TnpRNE5EQXhNamsyTDJoc2N5MDBaRFk1Tmpndk56SXdjQzl0WVhOMFpYSXROVGMwTlRnMk5pNDVNakE1TlRFME9USXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact -09</span></div></div><div class="list-group-item" onclick="playVideo('Y2sxWGJEbFNUV2RvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBNE5qQXdNUzB4TnpRNE5EZzRNalEwTDJoc2N5MHlOR1U1WlRndk56SXdjQzl0WVhOMFpYSXRNalkzTnpjMU1TNDBNRGMwT1RNNE5UWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Static Important Fact -10</span></div></div><div class="list-group-item" onclick="playVideo('VUZBd1lrUXlVamhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnM05EZzJNQzB4TnpRek5UY3lNRGMzTDJoc2N5MDJNR1F5WVRZdk56SXdjQzl0WVhOMFpYSXRPREExTlRZMU1TNHhNalU0TmpNNE56a3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Bihar Special Class - 1</span></div></div><div class="list-group-item" onclick="playVideo('UVd4V09YQnRWR3RvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnM09URTVOQzB4TnpRek5qVTFOakF5TDJoc2N5MDBaamM1TlRBdk56SXdjQzl0WVhOMFpYSXRNekl3T0RZM09TNHlOelUwT0RBM016SXpMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Bihar Special Class - 2</span></div></div><div class="list-group-item" onclick="playVideo('ZG1oWllqazJWVGxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnNU1EY3pPUzB4TnpRek9URTJNak14TDJoc2N5MDROV1UwWVRBdk56SXdjQzl0WVhOMFpYSXRPVEUxTmpjd015NHpOVGM1T1Rrek16SXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Bihar Special Class - 3</span></div></div><div class="list-group-item" onclick="playVideo('Vldsd2MxVlZaVTFvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnNU1qVTBOQzB4TnpRME1EQXlORFUwTDJoc2N5MDBaVFpsWTJVdk56SXdjQzl0WVhOMFpYSXROall5TlRjME5TNDBOVE0zTnpJM016Z3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Bihar Special Class - 4</span></div></div><div class="list-group-item" onclick="playVideo('VlVReFJXVk5kVGhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnNU56QXdPUzB4TnpRME1EZzVNemt5TDJoc2N5MWxaVFF5TWpRdk56SXdjQzl0WVhOMFpYSXROek16TXprNU1DNHpPREF5TkRBNE1UZ3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Bihar Special Class - 5</span></div></div><div class="list-group-item" onclick="playVideo('ZG5WVGRYRnNSRzFvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrd01UUTNNaTB4TnpRME1UYzBPRGt5TDJoc2N5MDNNMkU0TVdVdk56SXdjQzl0WVhOMFpYSXRNelUxTkRreE15NDBNakEyTURBM016RTBMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Bihar Special Class - 6</span></div></div><div class="list-group-item" onclick="playVideo('YzNCbGFXcFlZa0pvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrd05UWTFPUzB4TnpRME1qWXdOelE1TDJoc2N5MWlOVGN3T1dVdk56SXdjQzl0WVhOMFpYSXRNakl5TWpVeE55NHhOamN4TXpJeU1qYzNMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Bihar Special Class - 7</span></div></div><div class="list-group-item" onclick="playVideo('Tmt0WU1WTkhNRUpvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRreU16STJNeTB4TnpRME5qazBNREV6TDJoc2N5MWhNVEk0WTJRdk56SXdjQzl0WVhOMFpYSXRPRE0xTlRZMU5TNHdNemsxT0RRek16RXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Bihar Special Class- 8</span></div></div><div class="list-group-item" onclick="playVideo('Wkd3NWNVdDRTR1pvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnME56ZzBNQzB4TnpReU9UVTRPVGc0TDJoc2N5MDRaVFF5TmpBdk56SXdjQzl0WVhOMFpYSXROREF6TnpJd05pNHpOVGt6TnpZek9EUXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class- 1</span></div></div><div class="list-group-item" onclick="playVideo('VEdaVU5ISmFWVXhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnMU1qSTJNQzB4TnpRek1EUTFOVFk1TDJoc2N5MWpaVFV3WWpBdk56SXdjQzl0WVhOMFpYSXRNall5TVRJME9TNDROelkwTXpjeU16VXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class - 2</span></div></div><div class="list-group-item" onclick="playVideo('TlhWVldHVnZWRWhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnMU5qY3lOeTB4TnpRek1UTXlNVFE0TDJoc2N5MDNObVUzWXpNdk56SXdjQzl0WVhOMFpYSXRNamczT0RJeU1pNDBNRGc1TVRJMU1EYzBMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class - 3</span></div></div><div class="list-group-item" onclick="playVideo('T1VOd1p6WXhSa1pvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnMk1EazNNaTB4TnpRek1qRTRNemN6TDJoc2N5MHpZVEZtT0RFdk56SXdjQzl0WVhOMFpYSXRNekV6T0RnM015NHdNalUwTURZd01qWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class - 4</span></div></div><div class="list-group-item" onclick="playVideo('UzBWV2JISjJTVEZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnM05ETTVOaTB4TnpRek5UWTFPVFUzTDJoc2N5MWlaRGhsTWpndk56SXdjQzl0WVhOMFpYSXROamt4TWpNM055NDVNemN6TURJeE5qYzFMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class-5</span></div></div><div class="list-group-item" onclick="playVideo('ZW1sS2EwNWtRVFJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnM09EZ3lPUzB4TnpRek5qVXhPREkwTDJoc2N5MDBOemMyTURRdk56SXdjQzl0WVhOMFpYSXROek0zTURJME15NDVPRGt3TXpJMU1qUXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class-6</span></div></div><div class="list-group-item" onclick="playVideo('YldKRGRuRjVhVWxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnNE56WTFOUzB4TnpRek9ESTRPVE15TDJoc2N5MHdZVGs1TTJRdk56SXdjQzl0WVhOMFpYSXRPRFkyTlRRek5pNHpNVE15TWpRME16VXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class-7</span></div></div><div class="list-group-item" onclick="playVideo('TmxkalZXWnpiRkJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnNU1EWXpOUzB4TnpRek9UQTVNemc1TDJoc2N5MHhaVFZtTWpjdk56SXdjQzl0WVhOMFpYSXRNak01TkRrME1TNDBPVFEyTlRZd09DNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class-8</span></div></div><div class="list-group-item" onclick="playVideo('VFc5RE5WaGhkRkZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrNU9UYzNOUzB4TnpRMk5ESXhORGM0TDJoc2N5MWxaV0k0WTJFdk56SXdjQzl0WVhOMFpYSXROalF4T0RFek5DNHhOREl4TWpjNU9UTTFMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Hindi Class - 9</span></div></div><div class="list-group-item" onclick="playVideo('WmxkMGNscHhZa05vZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRreU56WXlPUzB4TnpRME56Z3dNak0wTDJoc2N5MHpabUUxTldFdk56SXdjQzl0WVhOMFpYSXROREU0TURNMU1DNHlNelV6TXpZM05qQTFMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Math Class - 1</span></div></div><div class="list-group-item" onclick="playVideo('T0RGSFlVRm9iWGxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrek1qQXhOUzB4TnpRME9EWTFOek00TDJoc2N5MWtPR05rTXpVdk56SXdjQzl0WVhOMFpYSXRORFUwT0RZek15NHdNekl5TVRnNU1qa3ViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Math Class - 2</span></div></div><div class="list-group-item" onclick="playVideo('TW1sdGNucFZSVGxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrek5qTXlOQzB4TnpRME9UVXpPVE0zTDJoc2N5MHdOMlJpTmprdk56SXdjQzl0WVhOMFpYSXROelEyTmpBM01DNHdOalU1TlRnd05TNXRNM1U0')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Math Class - 3</span></div></div><div class="list-group-item" onclick="playVideo('V25Wa05HUTNhbmxvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrME5UWXhOUzB4TnpRMU1qRXpNekUwTDJoc2N5MDVaRFppWlRndk56SXdjQzl0WVhOMFpYSXRNakl6TVRjeU9DNDFPVGczTVRnek5qVTNMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Math Class - 4</span></div></div><div class="list-group-item" onclick="playVideo('YkdwNWFFZ3hTMHhvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRrME9UYzJOQzB4TnpRMU1qazRNRGt6TDJoc2N5MHdZVGc0T1Rndk56SXdjQzl0WVhOMFpYSXRNelUxTmpjMk55NDJPVFF3TnpNd09EWXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Math Class - 5</span></div></div><div class="list-group-item" onclick="playVideo('ZWtWbFZteFVjM0JvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRneE56QXlNUzB4TnpReU1UUXpOelkyTDJoc2N5MWtZVFk0TlRVdk56SXdjQzl0WVhOMFpYSXROamcxTlRjMU1pNHlNelEwT1RnNE16VXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Class Information</span></div></div><div class="list-group-item" onclick="playVideo('YjIwMFEwZDRiRk5vZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TVRnME16azBOUzB4TnpReU9EYzFORFkyTDJoc2N5MDBZV1ExTXpZdk56SXdjQzl0WVhOMFpYSXRNemd6TWprM05TNHhORGMyTlRNME1qVTJMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>सम्पूर्ण जनगणना 2011</span></div></div><div class="list-group-item" onclick="playVideo('UjFsalZGSmpjakZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBek5qRTJPUzB4TnpRM01qYzVPRGs0TDJoc2N5MDVNalkxTm1Vdk56SXdjQzl0WVhOMFpYSXROVFUzTmpZMk5TNDVNekl6TVRjME5qSXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Computer VVI Fact-01</span></div></div><div class="list-group-item" onclick="playVideo('U0hSUGNrTkJUR0ZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpBME1ESXlOQzB4TnpRM016WXlPRGM1TDJoc2N5MWpZalF4TjJRdk56SXdjQzl0WVhOMFpYSXRNVFE0T0RZM015NDRNalUyTVRjMk1qVTRMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Computer VVI Fact-02</span></div></div><div class="list-group-item" onclick="playVideo('VkVJelFteFdhMVJvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFM09EWTBOQzB4TnpVd056TTNPRGd4TDJoc2N5MDNOek14Wm1Fdk56SXdjQzl0WVhOMFpYSXRNVEE0TURReE1DNHdOVGM1TURJMU5qVTFMbTB6ZFRnPQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>Heat and Wave</span></div></div><div class="list-group-item" onclick="playVideo('YTNOalQxaHpjVkZvZEhSd2N6b3ZMM1J5WVc1elkyOWtaV1F0ZG1sa1pXOXpMWFl5TG1Oc1lYTnplQzVqYnk1cGJpOTJhV1JsYjNNdloydG5jMjFoYzNScExXUmhkR0V2TWpFNE1qY3pOeTB4TnpVd09ESXhPVE0zTDJoc2N5MHpZbVJoTUdRdk56SXdjQzl0WVhOMFpYSXRPVEUyTmpnek5TNHdNVFU1T1Rrek5ETXViVE4xT0E9PQ==')"><div class="item-title"><i class="fas fa-play-circle"></i><span>English Class-03</span></div></div></div>
+                        </div>
+                        <div id="pdfs" class="tab-pane">
+                            <div class="list-group"><div class="list-group-item"><div class="item-title"><i class="fas fa-file-pdf text-danger"></i><span>हिन्दी व्याकरण PDF</span></div><div class="item-actions"><button class="btn-action view" onclick="viewPDF('ZFVsSGRXMVVkVTlvZEhSd2N6b3ZMMkZ3Y0hndGQzTmlMV2RqY0MxdFkyUnVMbUZyWVcxaGFTNXVaWFF1YVc0dmNHRnBaRjlqYjNWeWMyVTBMekl3TWpNdE1EZ3RNall0TUM0Mk5UYzRNakkyTkRjMU1Ea3dOemN5TG5Ca1pnPT0=')" title="View PDF"><i class="fas fa-eye"></i></button><button class="btn-action download" onclick="downloadFile('ZUROWldFaEpVVmxvZEhSd2N6b3ZMMkZ3Y0hndGQzTmlMV2RqY0MxdFkyUnVMbUZyWVcxaGFTNXVaWFF1YVc0dmNHRnBaRjlqYjNWeWMyVTBMekl3TWpNdE1EZ3RNall0TUM0Mk5UYzRNakkyTkRjMU1Ea3dOemN5TG5Ca1pnPT0=', 'हिन्दी व्याकरण PDF - @ItsUGBot.pdf')" title="Download PDF"><i class="fas fa-download"></i></button></div></div></div>
+                        </div>
+                        <div id="others" class="tab-pane">
+                            <div class="list-group"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="floating-controls">
+        <button class="floating-btn" onclick="scrollToTop()" title="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+    
+    <div class="toast-container"></div>
+    
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeToggle();
+        
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeToggle();
+        }
+        
+        function updateThemeToggle() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const sunIcon = document.querySelector('.theme-toggle .fa-sun');
+            const moonIcon = document.querySelector('.theme-toggle .fa-moon');
+            if (currentTheme === 'dark') {
+                sunIcon.style.display = '';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = '';
+            }
+        }
+        
+        function deobfuscateUrl(encoded) {
+            try {
+                let decoded = atob(encoded);
+                decoded = atob(decoded);
+                return decoded.slice(8);
+            } catch (e) {
+                console.error('Error decoding URL:', e);
+                return encoded;
+            }
+        }
+        
+        // Initialize Plyr with more features
+        const player = new Plyr('#player', {
+            controls: [
+                'play-large',
+                'restart',
+                'rewind',
+                'play',
+                'fast-forward',
+                'progress',
+                'current-time',
+                'duration',
+                'mute',
+                'volume',
+                'settings',
+                'pip',
+                'airplay',
+                'fullscreen'
+            ],
+            settings: ['captions', 'quality', 'speed', 'loop'],
+            speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 3, 4] },
+            tooltips: { controls: true, seek: true },
+            keyboard: { focused: true, global: true },
+            resetOnEnd: true,
+            fullscreen: { enabled: true, fallback: true, iosNative: true }
+        });
+        
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+        
+        function playCustomUrl() {
+            const url = document.getElementById('customUrl').value.trim();
+            if (url) {
+                if (url.includes('utkarshapp.com')) {
+                    window.open(url, '_blank');
+                } else {
+                    loadVideo(url);
+                    document.getElementById('customUrl').value = '';
+                }
+            }
+        }
+
+        // Add Enter key support for custom URL
+        document.getElementById('customUrl').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                playCustomUrl();
+            }
+        });
+        
+        function playVideo(encodedUrl) {
+            const url = deobfuscateUrl(encodedUrl);
+            if (url.includes('utkarshapp.com')) {
+                window.open(url, '_blank');
+                return;
+            }
+            
+            if (url.includes('api.extractor.workers.dev')) {
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.url) {
+                            loadVideo(data.url);
+                        }
+                    })
+                    .catch(() => {
+                        window.open(url, '_blank');
+                        showToast('Opening video in new tab', 'info');
+                    });
+            } else {
+                loadVideo(url);
+            }
+            
+            document.getElementById('player').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+        
+        function loadVideo(url) {
+            const source = { type: 'video' };
+            
+            if (url.includes('.m3u8')) {
+                if (Hls.isSupported()) {
+                    const hls = new Hls();
+                    hls.loadSource(url);
+                    hls.attachMedia(player.media);
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        player.play();
+                    });
+                } else if (player.media.canPlayType('application/vnd.apple.mpegurl')) {
+                    source.src = url;
+                    source.type = 'application/x-mpegURL';
+                    player.source = source;
+                    player.play();
+                }
+            } else {
+                source.src = url;
+                source.type = 'video/mp4';
+                player.source = source;
+                player.play();
+            }
+        }
+        
+        function viewPDF(encodedUrl) {
+            const url = deobfuscateUrl(encodedUrl);
+            const viewerUrl = `https://tempnewwebsite.classx.co.in/pdfjs/web/viewer.html?file=${encodeURIComponent(url)}&embedded=true`;
+            window.open(viewerUrl, '_blank');
+        }
+        
+        function downloadFile(encodedUrl, filename) {
+            const url = deobfuscateUrl(encodedUrl);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        function filterContent() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.list-group-item').forEach(item => {
+                const text = item.querySelector('.item-title').textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.opacity = '0';
+                    setTimeout(() => {
+                        item.style.display = '';
+                        item.style.opacity = '1';
+                    }, 150);
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        // Initialize tooltips
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+
+        // Handle fullscreen change
+        player.on('enterfullscreen', () => {
+            if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock('landscape').catch(() => {});
+            }
+        });
+
+        player.on('exitfullscreen', () => {
+            if (screen.orientation && screen.orientation.unlock) {
+                screen.orientation.unlock();
+            }
+        });
+    </script>
+    
+</body>
+</html>
